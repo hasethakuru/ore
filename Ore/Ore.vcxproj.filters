@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Ore">
+      <UniqueIdentifier>{0B12880B-771B-887C-0097-9E7C6C9F937C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ore\Events">
+      <UniqueIdentifier>{8FA3C955-7B5B-0BA3-E462-E4FED039A693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Win">
+      <UniqueIdentifier>{0792A7CC-F3F4-3671-9C7A-6F2788BC02F4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Ore.h" />
+    <ClInclude Include="src\Ore\Application.h">
+      <Filter>Ore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Core.h">
+      <Filter>Ore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\EntryPoint.h">
+      <Filter>Ore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Events\ApplicationEvent.h">
+      <Filter>Ore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Events\Event.h">
+      <Filter>Ore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Events\KeyEvent.h">
+      <Filter>Ore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Events\MouseEvent.h">
+      <Filter>Ore\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Layer.h">
+      <Filter>Ore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\LayerStack.h">
+      <Filter>Ore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Log.h">
+      <Filter>Ore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ore\Window.h">
+      <Filter>Ore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Win\WindowsWindow.h">
+      <Filter>Platform\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="src\opch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Ore\Application.cpp">
+      <Filter>Ore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ore\LayerStack.cpp">
+      <Filter>Ore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ore\Log.cpp">
+      <Filter>Ore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Win\WindowsWindow.cpp">
+      <Filter>Platform\Win</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opch.cpp" />
+    <ClCompile Include="src\Ore\Layer.cpp" />
+  </ItemGroup>
+</Project>

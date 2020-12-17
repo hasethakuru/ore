@@ -1,0 +1,6 @@
+[submodule "Ore/modules/spdlog"]
+	path = Ore/modules/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Ore/modules/GLFW"]
+	path = Ore/modules/GLFW
+	url = https://github.com/TheCherno/glfw
