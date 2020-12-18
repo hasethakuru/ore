@@ -1,0 +1,30 @@
+#pragma once
+
+#include "Ore/Layer.h"
+#include "Ore/Events/ApplicationEvent.h"
+#include "Ore/Events/KeyEvent.h"
+#include "Ore/Events/MouseEvent.h"
+
+namespace Ore {
+	class API ImGuiLayer : public Layer {
+	public:
+		ImGuiLayer();
+		~ImGuiLayer();
+
+		void OnAttach();
+		void OnDetach();
+		void OnUpdate();
+		void OnEvent(Event& event);
+	private:
+		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& event);
+		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& event);
+		bool OnMouseMovedEvent(MouseMovedEvent& event);
+		bool OnMouseScrolledEvent(MouseScrolledEvent& event);
+		bool OnKeyPressedEvent(KeyPressedEvent& event);
+		bool OnKeyReleasedEvent(KeyReleasedEvent& event);
+		bool OnKeyTypedEvent(KeyTypedEvent& e);
+		bool OnWindowResizeEvent(WindowResizeEvent& event);
+
+		float p_Time = 0.0f;
+	};
+}

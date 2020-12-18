@@ -1,0 +1,2 @@
+D:\Projects\cpp\Ore\Ore\modules\Glad\bin\Debug-windows-x86_64\Glad\Glad.pdb
+D:\Projects\cpp\Ore\Ore\modules\Glad\bin-int\Debug-windows-x86_64\Glad\Glad.pdb

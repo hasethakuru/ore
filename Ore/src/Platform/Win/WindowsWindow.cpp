@@ -3,6 +3,7 @@
 #include "Ore/Events/ApplicationEvent.h"
 #include "Ore/Events/MouseEvent.h"
 #include "Ore/Events/KeyEvent.h"
+#include <glad/glad.h>
 
 namespace Ore {
 	static bool GLFW_INIT = false;
@@ -38,6 +39,8 @@ namespace Ore {
 
 		p_Window = glfwCreateWindow((int)props.Width, (int)props.Height, p_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(p_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		ORE_CORE_ASSERT(status, "Failed to intialize GLAD");
 		glfwSetWindowUserPointer(p_Window, &p_Data);
 		SetVSync(true);
 
@@ -80,6 +83,13 @@ namespace Ore {
 						break;
 					}
 			}
+		});
+
+		glfwSetCharCallback(p_Window, [](GLFWwindow* window, unsigned int keycode)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			KeyTypedEvent event(keycode);
+			data.EventCallback(event);
 		});
 
 		glfwSetMouseButtonCallback(p_Window, [](GLFWwindow* window, int button, int action, int mods)

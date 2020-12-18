@@ -7,8 +7,14 @@
     <Filter Include="Ore\Events">
       <UniqueIdentifier>{8FA3C955-7B5B-0BA3-E462-E4FED039A693}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ore\ImGui">
+      <UniqueIdentifier>{75A396EB-E10D-4B62-2A4C-FC0796F528B7}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Win">
       <UniqueIdentifier>{0792A7CC-F3F4-3671-9C7A-6F2788BC02F4}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Ore\Events\MouseEvent.h">
       <Filter>Ore\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Ore\ImGui\ImGuiLayer.h">
+      <Filter>Ore\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Ore\Layer.h">
       <Filter>Ore</Filter>
     </ClInclude>
@@ -49,13 +58,24 @@
     <ClInclude Include="src\Ore\Window.h">
       <Filter>Ore</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Win\WindowsWindow.h">
       <Filter>Platform\Win</Filter>
     </ClInclude>
     <ClInclude Include="src\opch.h" />
+    <ClInclude Include="src\Ore\Input.h" />
+    <ClInclude Include="src\Platform\Win\WinInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ore\Application.cpp">
+      <Filter>Ore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ore\ImGui\imGuiLayer.cpp">
+      <Filter>Ore\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ore\Layer.cpp">
       <Filter>Ore</Filter>
     </ClCompile>
     <ClCompile Include="src\Ore\LayerStack.cpp">
@@ -64,10 +84,13 @@
     <ClCompile Include="src\Ore\Log.cpp">
       <Filter>Ore</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Win\WindowsWindow.cpp">
       <Filter>Platform\Win</Filter>
     </ClCompile>
     <ClCompile Include="src\opch.cpp" />
-    <ClCompile Include="src\Ore\Layer.cpp" />
+    <ClCompile Include="src\Platform\Win\WinInput.cpp" />
   </ItemGroup>
 </Project>

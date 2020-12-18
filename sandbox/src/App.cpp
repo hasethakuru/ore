@@ -23,6 +23,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new SandboxLayer());
+		PushOverlay(new Ore::ImGuiLayer());
 	}
 
 	~Sandbox()

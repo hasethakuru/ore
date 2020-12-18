@@ -16,11 +16,16 @@ namespace Ore {
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
+
+		inline static App& Get() { return *p_Instance; }
+		inline Window& GetWindow() { return *p_Window; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> p_Window;
 		bool p_Running = true;
 		LayerStack p_layerStack;
+	private:
+		static App* p_Instance;
 	};
 
 	App* CreateApplication();

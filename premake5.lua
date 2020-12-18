@@ -9,8 +9,12 @@ workspace "Ore"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 includeDir = {}
 includeDir["GLFW"] = "Ore/modules/GLFW/include"
+includeDir["Glad"] = "Ore/modules/Glad/include"
+includeDir["ImGui"] = "Ore/modules/imgui"
 
 include "Ore/modules/GLFW"
+include "Ore/modules/Glad"
+include "Ore/modules/imgui"
 
 project "Ore"
 	location "Ore"
@@ -31,12 +35,16 @@ project "Ore"
 	includedirs {
 		"%{prj.name}/modules/spdlog/include",
 		"%{prj.name}/src",
-		"%{includeDir.GLFW}"
+		"%{includeDir.GLFW}",
+		"%{includeDir.Glad}",
+		"%{includeDir.ImGui}"
 	}
 
 	links 
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -47,7 +55,8 @@ project "Ore"
 
 		defines {
 			"ORE_PLATFORM_WINDOWS",
-			"ORE_BUILD_DLL"
+			"ORE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands 

@@ -4,3 +4,6 @@
 [submodule "Ore/modules/GLFW"]
 	path = Ore/modules/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Ore/modules/imgui"]
+	path = Ore/modules/imgui
+	url = https://github.com/TheCherno/imgui
