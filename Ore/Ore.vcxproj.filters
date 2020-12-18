@@ -67,6 +67,8 @@
     <ClInclude Include="src\opch.h" />
     <ClInclude Include="src\Ore\Input.h" />
     <ClInclude Include="src\Platform\Win\WinInput.h" />
+    <ClInclude Include="src\Ore\KeyCodes.h" />
+    <ClInclude Include="src\Ore\MouseCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ore\Application.cpp">
