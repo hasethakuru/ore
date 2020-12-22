@@ -1,0 +1,2 @@
+D:\Projects\cpp\Ore\bin\Debug-windows-x86_64\Ore\Ore.pdb
+D:\Projects\cpp\Ore\bin-int\Debug-windows-x86_64\Ore\Ore.pdb

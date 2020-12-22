@@ -3,6 +3,8 @@
 #include "Ore/Log.h"
 #include "Ore/Window.h"
 #include <GLFW/glfw3.h>
+#include "Ore/Renderer/GraphicsContext.h"
+#include "Platform/OpenGL/RenderingContext.h"
 
 namespace Ore {
 
@@ -27,6 +29,7 @@ namespace Ore {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* p_Window;
+		RenderingContext* p_Context;
 
 		struct WindowData
 		{

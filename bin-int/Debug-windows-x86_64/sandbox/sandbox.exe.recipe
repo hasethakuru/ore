@@ -2,9 +2,6 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Projects\cpp\Ore\bin\Debug-windows-x86_64\Ore\Ore.dll</FullPath>
-    </ProjectOutput>
-    <ProjectOutput>
       <FullPath>D:\Projects\cpp\Ore\bin\Debug-windows-x86_64\sandbox\sandbox.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

@@ -2,6 +2,7 @@
 
 #include "Ore/Core.h"
 #include "Ore/Events/Event.h"
+#include "Ore/Core/Timestep.h"
 #include <iostream>
 
 namespace Ore {
@@ -12,7 +13,8 @@ namespace Ore {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate () {}
+		virtual void OnUpdate (Timestep deltaTime) {}
+		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 
 		inline const std::string& GetName()  const { return p_DebugName; }

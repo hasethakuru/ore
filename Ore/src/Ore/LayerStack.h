@@ -20,6 +20,6 @@ namespace Ore {
 
 	protected:
 		std::vector<Layer*> p_Layers;
-		std::vector<Layer*>::iterator p_InsertLayer;
+		unsigned int p_LayerInsertIndex = 0;
 	};
 }

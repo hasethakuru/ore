@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef ORE_PLATFORM_WINDOWS
+#if ORE_DYNAMIC_LINK
 	#ifdef  ORE_BUILD_DLL
 		#define API __declspec(dllexport)
 	#else
 		#define API __declspec(dllimport)
 	#endif
+#else
+	#define API
+#endif
 #else 
 	#error Invalid Platform!
 #endif

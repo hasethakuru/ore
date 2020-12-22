@@ -3,7 +3,6 @@
 #include "Ore/Events/ApplicationEvent.h"
 #include "Ore/Events/MouseEvent.h"
 #include "Ore/Events/KeyEvent.h"
-#include <glad/glad.h>
 
 namespace Ore {
 	static bool GLFW_INIT = false;
@@ -28,6 +27,7 @@ namespace Ore {
 		p_Data.Width = props.Width;
 		p_Data.Height = props.Height;
 
+
 		ORE_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
 		if (!GLFW_INIT) {
@@ -38,9 +38,9 @@ namespace Ore {
 		}
 
 		p_Window = glfwCreateWindow((int)props.Width, (int)props.Height, p_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(p_Window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		ORE_CORE_ASSERT(status, "Failed to intialize GLAD");
+		p_Context = new RenderingContext(p_Window);
+		p_Context->Init();
+		
 		glfwSetWindowUserPointer(p_Window, &p_Data);
 		SetVSync(true);
 
@@ -136,7 +136,7 @@ namespace Ore {
 	void WindowsWindow::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(p_Window);
+		p_Context->SwapBuffers();
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)
